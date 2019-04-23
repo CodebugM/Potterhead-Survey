@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Potterhead Survey</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- CSS styles files -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Jolly+Lodger" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <h1 id="title">Potterhead Survey</h1>
+    <p id="description"> A short survey to determine what kind of Potter fan you are</p>
+
+    <!-- Form element -->
+    <!-- the action attribute defines the action to be performed when the form is submitted -->
+    <form id="survey-form" action="/action_page.php" target="_blank">
+
+    <!-- Required input fields, split up into divs as per the Bootstrap documentation -->
+    <!-- Source for Bootstrap form elements: https://getbootstrap.com/docs/4.3/components/forms/ -->
+    <div class="form-group">
+      <label id="name-label">Name *</label>
+      <input type="text" id="name" class="form-control" placeholder="Luna Lovegood" required>
+    </div>
+
+    <div class="form-group">
+      <label id="email-label">E-mail address *</label>
+      <!-- setting the type attribute to "email" validates the field is either empty or has
+      a properly formatted email address in it -->
+      <!-- the required attribute ensures the field can't be left empty -->
+      <input type="email" id="email" class="form-control" placeholder="luna.lovegood@ravenclaw.co.uk" required>
+    </div>
+
+    <div class="form-group">
+      <label id="number-label">Age *</label>
+      <input type="number" id="number" min="0" max="120" class="form-control" placeholder="17" required>
+    </div>
+
+    <br>
+
+    <!-- Radio buttons -->
+    <!-- Bootstrap radio button form -->
+    <!-- All grouped together by the name attribute being equal to "hogwarts-house" -->
+<label class="question">Which Hogwarts house do you belong to?</label>
+<div class="form-check">
+  <input id="gryffindor" type="radio" name="hogwarts-house" class="form-check-input">
+  <label for="gryffindor" class="form-check-label">Gryffindor</label>
+</div>
+<div class="form-check">
+  <input id="ravenclaw" type="radio" name="hogwarts-house" class="form-check-input">
+  <label for="ravenclaw" class="form-check-label">Ravenclaw</label>
+</div>
+<div class="form-check">
+  <input id="hufflepuff" type="radio" name="hogwarts-house" class="form-check-input">
+  <label for="hufflepuff" class="form-check-label">Hufflepuff</label>
+</div>
+<div class="form-check">
+  <input id="slytherin" type="radio" name="hogwarts-house" class="form-check-input">
+  <label for="slytherin" class="form-check-label">Slytherin</label>
+</div>
+
+<br>
+
+<!-- checkboxes section -->
+<label class="question">What are your favourite subjects at Hogwarts? Check all that apply.</label>
+<div class="form-check">
+  <input type="checkbox" class="form-check-input" value="option1">
+<label class="form-check-label">Transfiguration</label>
+</div>
+<div class="form-check">
+  <input type="checkbox" class="form-check-input" value="option2">
+<label class="form-check-label">Care of magical creatures</label>
+</div>
+<div class="form-check">
+  <input type="checkbox" class="form-check-input" value="option3">
+<label class="form-check-label">History of magic</label>
+</div>
+<div class="form-check">
+  <input type="checkbox" class="form-check-input" value="option4">
+<label class="form-check-label">Herbology</label>
+</div>
+<div class="form-check">
+  <input type="checkbox" class="form-check-input" value="option5">
+<label class="form-check-label">Potions</label>
+</div>
+<div class="form-check">
+  <input type="checkbox" class="form-check-input" value="option6">
+<label class="form-check-label">Defence against the dark arts</label>
+</div>
+<div class="form-check">
+  <input type="checkbox" class="form-check-input" value="option7">
+<label class="form-check-label">Astronomy</label>
+</div>
+<div class="form-check">
+  <input type="checkbox" class="form-check-input" value="option8">
+<label class="form-check-label">Charms</label>
+</div>
+<div class="form-check">
+  <input type="checkbox" class="form-check-input" value="option9">
+<label class="form-check-label">Flying lessons</label>
+</div
+><div class="form-check">
+  <input type="checkbox" class="form-check-input" value="option10">
+<label class="form-check-label">Divination</label>
+</div>
+<div class="form-check">
+  <input type="checkbox" class="form-check-input" value="option11">
+<label class="form-check-label">Muggle studies</label>
+</div>
+<div class="form-check">
+  <input type="checkbox" class="form-check-input" value="option12">
+<label class="form-check-label">Arithmnacy</label>
+</div>
+
+<br>
+
+<label class="question">Are you a member of Dubledore's Army?</label>
+<div class="form-check">
+  <input id="yes" type="radio" name="dumbledoresarmy" class="form-check-input">
+  <label for="yes" class="form-check-label">Absolutely!</label>
+</div>
+<div class="form-check">
+  <input id="no" type="radio" name="dumbledoresarmy" class="form-check-input">
+  <label for="no" class="form-check-label">No...</label>
+</div>
+
+<br>
+<!-- Dropdown menu -->
+<label for="dropdown" class="question">What would you like to do after your time at Hogwarts?</label>
+<select class="form-control" id="dropdown">
+<option>Investigate crumplehorned snorkacks</option>
+<option>Catch blubbering humdingers</option>
+<option>Start a business selling dirigible plum earrings and butter beer cork necklaces</option>
+<option>Work at St. Mungos hospital</option>
+<option>Help Hagrid with his gamekeeper duties</option>
+<option>Daydream</option>
+</select>
+
+<br>
+
+<!-- Textarea -->
+<label class="question">Space for your comments:</label><br>
+<textarea name="name" rows="8" cols="80">What are you missing from this survey? Would you like to talk about your favourite book, the Monster Book of Monsters, what plants you enjoyed most working with in Herbology or what other Hogwarts student you have a crush on? Have your say!
+</textarea>
+
+<br>
+
+
+
+    <!--   Submit button -->
+    <div class="button">
+      <button id="submit" type="submit" class="btn btn-primary">I solemnly swear that I'm up to no good!</button>
+    <!--   Explanation submit button -->
+      <small id="submit-help" class="form-text text-muted">Submitting this form won't reveal the Marauder's Map but it will be equally enlightening :)
+  </div>
+    </form>
+
+
+  </body>
+</html>

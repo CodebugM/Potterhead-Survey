@@ -1,0 +1,62 @@
+body {
+  background: url(https://static1.srcdn.com/wordpress/wp-content/uploads/2019/02/18-Explore-Hogwarts.jpg);
+  background-size: cover;
+}
+
+/* Title section */
+
+#title {
+  color: #fad284;
+  font-family: Jolly Lodger;
+  font-size: 6em;
+  text-align: center;
+}
+
+#description {
+  color: #fad284;
+  font-family: Oswald;
+  font-size: 2em;
+  text-align: center;
+}
+
+/* End of title section */
+
+form {
+  font-family: Open Sans;
+  font-size: 1em;
+  margin: 0 10% 0 5%;
+}
+
+label {
+  color: #fad284;
+}
+
+.question {
+  font-family: Open Sans;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+#name-label, #email-label, #number-label {
+  font-family: Open Sans;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+/* Submit button */
+.button {
+  text-align: center;
+  padding: 3.5%;
+}
+
+.btn-primary {
+  color: #f0eec8;
+  background-color: #085f63;
+  border-color: #085f63;
+  font-size: 1.2em;
+}
+
+/* Submit help */
+#submit-help {
+  color: #f0eec8;
+}
